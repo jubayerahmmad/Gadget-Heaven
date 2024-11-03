@@ -1,7 +1,9 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { FaRegHeart, FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
+  const { pathname } = useLocation();
+  // console.log(pathname);
   const links = (
     <>
       <li>
@@ -42,12 +44,23 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost text-xl lg:text-4xl font-bold">
+        <Link
+          to="/"
+          className={`btn btn-ghost text-xl lg:text-4xl font-bold ${
+            pathname === "/" ? "text-white" : "text-black"
+          }`}
+        >
           Gadget Heaven
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="text-2xl gap-4 px-4 py-2 flex font-semibold">{links}</ul>
+        <ul
+          className={`text-2xl gap-4 px-4 py-2 flex font-semibold ${
+            pathname === "/" ? "text-white" : "text-black"
+          }`}
+        >
+          {links}
+        </ul>
       </div>
       <div className="navbar-end gap-2">
         <a className="btn bg-white  btn-sm  btn-circle">

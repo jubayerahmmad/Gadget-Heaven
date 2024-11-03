@@ -7,7 +7,7 @@ const Footer = () => {
           <p>Leading The way in cutting-edge technology and innovation</p>
         </div>
         <div className="divider"></div>
-        <div className="lg:flex justify-between items-center gap-8">
+        <div className="lg:flex justify-between items-center gap-12 space-y-4">
           <nav>
             <h6 className="footer-title">Services</h6>
             <div className="flex flex-col">
