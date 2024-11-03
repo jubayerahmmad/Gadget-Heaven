@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+  font-weight: bold;
+  color: rebeccapurple;
+  text-decoration: underline;
+}
+
+body {
+  font-family: "Sora", sans-serif;
+}

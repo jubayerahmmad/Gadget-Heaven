@@ -1,9 +1,18 @@
+import { Outlet } from "react-router-dom";
 import Home from "../pages/Home";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 const Root = () => {
   return (
-    <div>
-      <Home></Home>
+    <div className="flex flex-col min-h-screen">
+      <div className="w-11/12 mx-auto">
+        <Navbar></Navbar>
+      </div>
+      <div className="flex-grow">
+        <Outlet></Outlet>
+      </div>
+      <Footer></Footer>
     </div>
   );
 };
