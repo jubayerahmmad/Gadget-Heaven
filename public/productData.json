@@ -1,0 +1,205 @@
+[
+  {
+    "product_id": "S101",
+    "product_title": "Apple iPhone 14 Pro",
+    "product_image": "https://i.ibb.co.com/VBwHgGG/Applei-Phone14-Pro-1-01.jpg",
+    "category": "Smartphones",
+    "price": 1099,
+    "description": "High-performance smartphone with advanced camera and display.",
+    "specifications": [
+      "128GB Storage",
+      "6GB RAM",
+      "6.1-inch OLED display",
+      "48MP Triple Camera"
+    ],
+    "availability": true,
+    "rating": 4.9,
+    "warranty": "1 year"
+  },
+  {
+    "product_id": "S102",
+    "product_title": "Samsung Galaxy S23 Ultra",
+    "product_image": "https://i.ibb.co.com/Jt8QKPj/Samsung-Galaxy-S23-Ultra-Cream-Smartphone.jpg",
+    "category": "Smartphones",
+    "price": 1199,
+    "description": "Powerful smartphone with 200MP camera and S Pen compatibility.",
+    "specifications": [
+      "256GB Storage",
+      "8GB RAM",
+      "6.8-inch QHD+ AMOLED display",
+      "200MP Quad Camera"
+    ],
+    "availability": false,
+    "rating": 4.8,
+    "warranty": "2 years"
+  },
+  {
+    "product_id": "S103",
+    "product_title": "Google Pixel 7 Pro",
+    "product_image": "https://i.ibb.co.com/rG6d6kV/google-pixel-7-pro.png",
+    "category": "Smartphones",
+    "price": 899,
+    "description": "Smartphone with Google Tensor G2 chip and excellent camera software.",
+    "specifications": [
+      "128GB Storage",
+      "12GB RAM",
+      "6.7-inch LTPO OLED display",
+      "50MP Triple Camera"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "warranty": "1 year"
+  },
+  {
+    "product_id": "S104",
+    "product_title": "OnePlus 11",
+    "product_image": "https://i.ibb.co.com/1GQKXQg/oneplus-11-5g-titan-black-back-1200x.webp",
+    "category": "Smartphones",
+    "price": 699,
+    "description": "Fast-charging smartphone with Snapdragon 8 Gen 2.",
+    "specifications": [
+      "256GB Storage",
+      "8GB RAM",
+      "6.7-inch AMOLED display",
+      "50MP Triple Camera"
+    ],
+    "availability": true,
+    "rating": 4.5,
+    "warranty": "1 year"
+  },
+  {
+    "product_id": "S105",
+    "product_title": "Sony Xperia 1 V",
+    "product_image": "https://i.ibb.co.com/cvrpbSN/Sony-Xperia-1-IV.jpg",
+    "category": "Smartphones",
+    "price": 999,
+    "description": "Smartphone with 4K HDR OLED display and advanced photography features.",
+    "specifications": [
+      "256GB Storage",
+      "12GB RAM",
+      "6.5-inch 4K OLED display",
+      "48MP Triple Camera"
+    ],
+    "availability": false,
+    "rating": 4.6,
+    "warranty": "1 year"
+  },
+  {
+    "product_id": "S106",
+    "product_title": "Xiaomi Mi 13 Pro",
+    "product_image": "https://i.ibb.co.com/w080QNW/46f40b1ac9e4e9c3228dc89ee3d12c0e.jpg",
+    "category": "Smartphones",
+    "price": 799,
+    "description": "Smartphone with Leica cameras and Snapdragon 8 Gen 2 processor.",
+    "specifications": [
+      "256GB Storage",
+      "12GB RAM",
+      "6.73-inch AMOLED display",
+      "50MP Triple Camera"
+    ],
+    "availability": true,
+    "rating": 4.5,
+    "warranty": "1 year"
+  },
+  {
+    "product_id": "L201",
+    "product_title": "Apple MacBook Pro 14-inch",
+    "product_image": "https://i.ibb.co.com/qWSZ0q8/Apple-Mac-Book-Pro-M3-Pro-14-inch-11-Core-CPU-14-Core-GPU-2.jpg",
+    "category": "Laptops",
+    "price": 1999,
+    "description": "MacBook Pro with M2 Pro chip and Liquid Retina XDR display.",
+    "specifications": [
+      "512GB SSD",
+      "16GB RAM",
+      "M2 Pro chip",
+      "14.2-inch Retina display"
+    ],
+    "availability": false,
+    "rating": 4.9,
+    "warranty": "1 year"
+  },
+  {
+    "product_id": "L202",
+    "product_title": "Dell XPS 13",
+    "product_image": "https://i.ibb.co.com/ZY4SLS1/dell-xps-9340-13-2024.webp",
+    "category": "Laptops",
+    "price": 1249,
+    "description": "Ultraportable laptop with Intel Core i7 and InfinityEdge display.",
+    "specifications": [
+      "512GB SSD",
+      "16GB RAM",
+      "Intel Core i7-1255U",
+      "13.4-inch FHD+ display"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "warranty": "2 years"
+  },
+  {
+    "product_id": "L203",
+    "product_title": "HP Spectre x360",
+    "product_image": "https://i.ibb.co.com/rMLPGzC/V0-F3-D24041411-QORZB3.jpg",
+    "category": "Laptops",
+    "price": 1599,
+    "description": "2-in-1 laptop with Intel Core i7 and 4K OLED touch display.",
+    "specifications": [
+      "1TB SSD",
+      "16GB RAM",
+      "Intel Core i7-1165G7",
+      "13.3-inch 4K OLED display"
+    ],
+    "availability": false,
+    "rating": 4.6,
+    "warranty": "1 year"
+  },
+  {
+    "product_id": "A301",
+    "product_title": "Apple AirPods Pro (2nd Generation)",
+    "product_image": "https://i.ibb.co.com/8dVkjBk/og-eui2mpgzwyaa-overview.png",
+    "category": "Accessories",
+    "price": 249,
+    "description": "Active noise-canceling earbuds with adaptive transparency.",
+    "specifications": [
+      "Active Noise Cancellation",
+      "Spatial Audio",
+      "MagSafe Charging"
+    ],
+    "availability": true,
+    "rating": 4.8,
+    "warranty": "1 year"
+  },
+  {
+    "product_id": "A302",
+    "product_title": "Samsung Galaxy Watch 5",
+    "product_image": "https://i.ibb.co.com/FYJQ1fJ/galaxy-watch5-pro-monitoring-display-mo.jpg",
+    "category": "Accessories",
+    "price": 329,
+    "description": "Advanced health tracking smartwatch with customizable faces.",
+    "specifications": [
+      "1.4-inch AMOLED display",
+      "ECG Monitoring",
+      "GPS",
+      "Water-resistant"
+    ],
+    "availability": true,
+    "rating": 4.6,
+    "warranty": "1 year"
+  },
+  {
+    "product_id": "A303",
+    "product_title": "Logitech MX Master 3S",
+    "product_image": "https://i.ibb.co.com/S5fWZjc/web-1.png",
+    "category": "Accessories",
+    "price": 99,
+    "description": "Ergonomic wireless mouse with precise scrolling and customizable buttons.",
+    "specifications": [
+      "Wireless",
+      "USB-C charging",
+      "4000 DPI",
+      "Logitech Options software"
+    ],
+    "availability": false,
+    "rating": 4.7,
+    "warranty": "1 year"
+  }
+]
