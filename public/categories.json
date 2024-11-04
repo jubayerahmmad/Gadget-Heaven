@@ -1,0 +1,19 @@
+[
+  {
+    "product_id": "ALL1",
+    "category": "All Products"
+  },
+  {
+    "product_id": "S1",
+    "category": "Smartphones"
+  },
+  {
+    "product_id": "L1",
+    "category": "Laptops"
+  },
+
+  {
+    "product_id": "A1",
+    "category": "Accessories"
+  }
+]

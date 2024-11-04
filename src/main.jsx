@@ -6,6 +6,7 @@ import Root from "./components/Root";
 import Home from "./pages/Home";
 import Statistics from "./pages/Statistics";
 import Dashboard from "./pages/Dashboard";
+import Cards from "./components/Cards";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("../categories.json"),
+        children: [
+          {
+            path: "/cards/:category",
+            element: <Cards></Cards>,
+          },
+        ],
       },
       {
         path: "/statistics",
