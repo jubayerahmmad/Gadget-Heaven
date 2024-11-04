@@ -8,6 +8,7 @@ import Statistics from "./pages/Statistics";
 import Dashboard from "./pages/Dashboard";
 import Cards from "./components/Cards";
 import ProductDetails from "./components/productDetails";
+import Cart from "./components/Cart";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,12 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
+        children: [
+          {
+            path: "/dashboard",
+            element: <Cart></Cart>,
+          },
+        ],
       },
     ],
   },

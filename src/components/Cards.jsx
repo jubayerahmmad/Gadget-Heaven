@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import Card from "./Card";
 import NoData from "./NoData";
-// import NoData from "./NoData";
 
 const Cards = () => {
   const { category } = useParams();

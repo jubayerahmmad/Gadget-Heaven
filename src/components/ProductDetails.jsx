@@ -1,6 +1,10 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import DBanner from "./DBanner";
 import { FaRegStar, FaRegHeart, FaShoppingCart } from "react-icons/fa";
+import {
+  addCartToLocalStorage,
+  addWishlistToLocalStorage,
+} from "../Utils/utilities";
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -10,7 +14,15 @@ const ProductDetails = () => {
     (product) => product.product_id === productId
   );
 
+  const handleAddToCart = (id) => {
+    addCartToLocalStorage(id);
+  };
+  const handleAddToWishlist = (id) => {
+    addWishlistToLocalStorage(id);
+  };
+
   const {
+    product_id,
     product_image,
     product_title,
     price,
@@ -65,10 +77,16 @@ const ProductDetails = () => {
                 </div>
               </div>
               <div className="flex gap-6">
-                <button className="btn btn-sm lg:btn-md rounded-full bg-purple-500 text-white  font-bold">
+                <button
+                  onClick={() => handleAddToCart(product_id)}
+                  className="btn btn-sm lg:btn-md rounded-full bg-purple-500 text-white  font-bold"
+                >
                   Add to Cart <FaShoppingCart size={20} />
                 </button>
-                <button className="btn btn-sm lg:btn-md rounded-full border border-purple-500 text-purple-500 font-bold">
+                <button
+                  onClick={() => handleAddToWishlist(product_id)}
+                  className="btn btn-sm lg:btn-md rounded-full border border-purple-500 text-purple-500 font-bold"
+                >
                   Favourites <FaRegHeart size={20}></FaRegHeart>
                 </button>
               </div>

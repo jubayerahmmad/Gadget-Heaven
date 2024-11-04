@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const DBanner = () => {
   const { pathname } = useLocation();
@@ -16,12 +16,24 @@ const DBanner = () => {
         </p>
         {pathname === "/dashboard" ? (
           <div className="flex gap-2 justify-center">
-            <button className="btn btn-outline rounded-full text-white">
+            <NavLink
+              className={({ isActive }) =>
+                `btn btn-outline rounded-full ${
+                  isActive ? "text-black bg-white" : "text-white"
+                }`
+              }
+            >
               Cart
-            </button>
-            <button className="btn btn-outline rounded-full text-white">
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                `btn btn-outline rounded-full ${
+                  isActive ? "text-black bg-white" : "text-white"
+                }`
+              }
+            >
               Wishlist
-            </button>
+            </NavLink>
           </div>
         ) : (
           ""
