@@ -1,5 +1,11 @@
+import DBanner from "./DBanner";
+
 const ProductDetails = () => {
-  return <div>This is product details</div>;
+  return (
+    <div>
+      <DBanner></DBanner>
+    </div>
+  );
 };
 
 export default ProductDetails;

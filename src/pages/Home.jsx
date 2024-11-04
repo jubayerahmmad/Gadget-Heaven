@@ -1,11 +1,9 @@
 import { Outlet, useLoaderData } from "react-router-dom";
 import CategorySidebar from "../components/CategorySidebar";
 import HomeBanner from "../components/HomeBanner";
-import Cards from "../components/Cards";
 
 const Home = () => {
   const categories = useLoaderData();
-  // console.log(categories);
 
   return (
     <div>
@@ -19,7 +17,6 @@ const Home = () => {
             <CategorySidebar categories={categories}></CategorySidebar>
           </div>
           <div className="lg:w-3/4">
-            {/* <Cards></Cards> */}
             <Outlet></Outlet>
           </div>
         </div>
