@@ -50,57 +50,7 @@
     "rating": 4.7,
     "warranty": "1 year"
   },
-  {
-    "product_id": "S104",
-    "product_title": "OnePlus 11",
-    "product_image": "https://i.ibb.co.com/1GQKXQg/oneplus-11-5g-titan-black-back-1200x.webp",
-    "category": "Smartphones",
-    "price": 699,
-    "description": "Fast-charging smartphone with Snapdragon 8 Gen 2.",
-    "specifications": [
-      "256GB Storage",
-      "8GB RAM",
-      "6.7-inch AMOLED display",
-      "50MP Triple Camera"
-    ],
-    "availability": true,
-    "rating": 4.5,
-    "warranty": "1 year"
-  },
-  {
-    "product_id": "S105",
-    "product_title": "Sony Xperia 1 V",
-    "product_image": "https://i.ibb.co.com/cvrpbSN/Sony-Xperia-1-IV.jpg",
-    "category": "Smartphones",
-    "price": 999,
-    "description": "Smartphone with 4K HDR OLED display and advanced photography features.",
-    "specifications": [
-      "256GB Storage",
-      "12GB RAM",
-      "6.5-inch 4K OLED display",
-      "48MP Triple Camera"
-    ],
-    "availability": false,
-    "rating": 4.6,
-    "warranty": "1 year"
-  },
-  {
-    "product_id": "S106",
-    "product_title": "Xiaomi Mi 13 Pro",
-    "product_image": "https://i.ibb.co.com/w080QNW/46f40b1ac9e4e9c3228dc89ee3d12c0e.jpg",
-    "category": "Smartphones",
-    "price": 799,
-    "description": "Smartphone with Leica cameras and Snapdragon 8 Gen 2 processor.",
-    "specifications": [
-      "256GB Storage",
-      "12GB RAM",
-      "6.73-inch AMOLED display",
-      "50MP Triple Camera"
-    ],
-    "availability": true,
-    "rating": 4.5,
-    "warranty": "1 year"
-  },
+
   {
     "product_id": "L201",
     "product_title": "Apple MacBook Pro 14-inch",
@@ -136,6 +86,23 @@
     "warranty": "2 years"
   },
   {
+    "product_id": "A303",
+    "product_title": "Logitech MX Master 3S",
+    "product_image": "https://i.ibb.co.com/S5fWZjc/web-1.png",
+    "category": "Accessories",
+    "price": 99,
+    "description": "Ergonomic wireless mouse with precise scrolling and customizable buttons.",
+    "specifications": [
+      "Wireless",
+      "USB-C charging",
+      "4000 DPI",
+      "Logitech Options software"
+    ],
+    "availability": false,
+    "rating": 4.7,
+    "warranty": "1 year"
+  },
+  {
     "product_id": "L203",
     "product_title": "HP Spectre x360",
     "product_image": "https://i.ibb.co.com/rMLPGzC/V0-F3-D24041411-QORZB3.jpg",
@@ -150,6 +117,41 @@
     ],
     "availability": false,
     "rating": 4.6,
+    "warranty": "1 year"
+  },
+  {
+    "product_id": "S105",
+    "product_title": "Sony Xperia 1 V",
+    "product_image": "https://i.ibb.co.com/cvrpbSN/Sony-Xperia-1-IV.jpg",
+    "category": "Smartphones",
+    "price": 999,
+    "description": "Smartphone with 4K HDR OLED display and advanced photography features.",
+    "specifications": [
+      "256GB Storage",
+      "12GB RAM",
+      "6.5-inch 4K OLED display",
+      "48MP Triple Camera"
+    ],
+    "availability": false,
+    "rating": 4.6,
+    "warranty": "1 year"
+  },
+
+  {
+    "product_id": "S104",
+    "product_title": "OnePlus 11",
+    "product_image": "https://i.ibb.co.com/1GQKXQg/oneplus-11-5g-titan-black-back-1200x.webp",
+    "category": "Smartphones",
+    "price": 699,
+    "description": "Fast-charging smartphone with Snapdragon 8 Gen 2.",
+    "specifications": [
+      "256GB Storage",
+      "8GB RAM",
+      "6.7-inch AMOLED display",
+      "50MP Triple Camera"
+    ],
+    "availability": true,
+    "rating": 4.5,
     "warranty": "1 year"
   },
   {
@@ -186,20 +188,20 @@
     "warranty": "1 year"
   },
   {
-    "product_id": "A303",
-    "product_title": "Logitech MX Master 3S",
-    "product_image": "https://i.ibb.co.com/S5fWZjc/web-1.png",
-    "category": "Accessories",
-    "price": 99,
-    "description": "Ergonomic wireless mouse with precise scrolling and customizable buttons.",
+    "product_id": "S106",
+    "product_title": "Xiaomi Mi 13 Pro",
+    "product_image": "https://i.ibb.co.com/w080QNW/46f40b1ac9e4e9c3228dc89ee3d12c0e.jpg",
+    "category": "Smartphones",
+    "price": 799,
+    "description": "Smartphone with Leica cameras and Snapdragon 8 Gen 2 processor.",
     "specifications": [
-      "Wireless",
-      "USB-C charging",
-      "4000 DPI",
-      "Logitech Options software"
+      "256GB Storage",
+      "12GB RAM",
+      "6.73-inch AMOLED display",
+      "50MP Triple Camera"
     ],
-    "availability": false,
-    "rating": 4.7,
+    "availability": true,
+    "rating": 4.5,
     "warranty": "1 year"
   }
 ]

@@ -19,6 +19,7 @@ const Home = () => {
             <CategorySidebar categories={categories}></CategorySidebar>
           </div>
           <div className="lg:w-3/4">
+            {/* <Cards></Cards> */}
             <Outlet></Outlet>
           </div>
         </div>

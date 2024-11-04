@@ -15,7 +15,7 @@ const HomeBanner = () => {
             it all!
           </p>
           <Link to="/dashboard">
-            <button className="btn rounded-full text-lg font-bold mt-4 text-purple-500">
+            <button className="btn rounded-full border border-purple-400 text-lg font-bold mt-4 text-purple-500">
               Shop Now
             </button>
           </Link>

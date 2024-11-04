@@ -1,11 +1,11 @@
 [
   {
-    "product_id": "ALL1",
-    "category": "All Products"
-  },
-  {
     "product_id": "S1",
     "category": "Smartphones"
+  },
+  {
+    "product_id": "D1",
+    "category": "Desktop Components"
   },
   {
     "product_id": "L1",
@@ -15,5 +15,10 @@
   {
     "product_id": "A1",
     "category": "Accessories"
+  },
+
+  {
+    "product_id": "G1",
+    "category": "Gaming Gears"
   }
 ]
