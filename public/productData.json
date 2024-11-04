@@ -29,7 +29,7 @@
       "6.8-inch QHD+ AMOLED display",
       "200MP Quad Camera"
     ],
-    "availability": false,
+    "availability": true,
     "rating": 4.8,
     "warranty": "2 years"
   },
@@ -64,7 +64,7 @@
       "M2 Pro chip",
       "14.2-inch Retina display"
     ],
-    "availability": false,
+    "availability": true,
     "rating": 4.9,
     "warranty": "1 year"
   },

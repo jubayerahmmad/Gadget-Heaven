@@ -1,5 +1,11 @@
+import DBanner from "../components/DBanner";
+
 const Dashboard = () => {
-  return <div>This is dashBoard</div>;
+  return (
+    <div>
+      <DBanner></DBanner>
+    </div>
+  );
 };
 
 export default Dashboard;

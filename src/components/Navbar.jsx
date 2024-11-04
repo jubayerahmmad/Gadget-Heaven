@@ -62,13 +62,19 @@ const Navbar = () => {
           {links}
         </ul>
       </div>
-      <div className="navbar-end gap-2">
-        <a className="btn bg-white  btn-sm  btn-circle">
-          <FaShoppingCart size={16} />
-        </a>
-        <a className="btn btn-circle bg-white btn-sm ">
-          <FaRegHeart size={16}></FaRegHeart>
-        </a>
+      <div className="navbar-end gap-2 mr-4">
+        <div className="indicator">
+          <span className="indicator-item badge badge-neutral">0</span>
+          <a className="btn bg-white btn-sm lg:btn-md btn-circle">
+            <FaShoppingCart size={20} />
+          </a>
+        </div>
+        <div className="indicator">
+          <span className="indicator-item badge badge-neutral">0</span>
+          <a className="btn btn-circle bg-white btn-sm lg:btn-md">
+            <FaRegHeart size={20}></FaRegHeart>
+          </a>
+        </div>
       </div>
     </div>
   );
