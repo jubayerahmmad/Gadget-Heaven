@@ -51,7 +51,7 @@ const router = createBrowserRouter([
         element: <Dashboard></Dashboard>,
         children: [
           {
-            path: "/dashboard",
+            path: "/dashboard/cart",
             element: <Cart></Cart>,
             loader: () => fetch("../productData.json"),
           },

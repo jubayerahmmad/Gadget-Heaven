@@ -76,7 +76,7 @@ const Navbar = () => {
         <div className="indicator">
           <span className="indicator-item badge badge-neutral">{cart}</span>
           <Link
-            to="/dashboard"
+            to="/dashboard/cart"
             className="btn bg-white btn-sm lg:btn-md btn-circle"
           >
             <FaShoppingCart size={20} />
