@@ -43,4 +43,9 @@ const addWishlistToLocalStorage = (id) => {
   }
 };
 
-export { addCartToLocalStorage, addWishlistToLocalStorage };
+export {
+  addCartToLocalStorage,
+  addWishlistToLocalStorage,
+  getStoredCart,
+  getStoredWishlist,
+};

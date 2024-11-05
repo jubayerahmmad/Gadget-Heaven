@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import Cards from "./components/Cards";
 import ProductDetails from "./components/productDetails";
 import Cart from "./components/Cart";
+import WishList from "./components/WishList";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
           {
             path: "/dashboard",
             element: <Cart></Cart>,
+            loader: () => fetch("../productData.json"),
+          },
+          {
+            path: "/dashboard/wishlist",
+            element: <WishList></WishList>,
           },
         ],
       },

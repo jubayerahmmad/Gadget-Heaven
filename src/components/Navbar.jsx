@@ -1,9 +1,19 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { FaRegHeart, FaShoppingCart } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { getStoredCart, getStoredWishlist } from "../Utils/utilities";
 
 const Navbar = () => {
+  const [cart, setCart] = useState(0);
+  const [wishList, setWishList] = useState(0);
   const { pathname } = useLocation();
-  // console.log(pathname);
+  useEffect(() => {
+    const getCart = getStoredCart();
+    const getWishList = getStoredWishlist();
+    setCart(getCart.length);
+    setWishList(getWishList.length);
+  }, []);
+
   const links = (
     <>
       <li>
@@ -64,16 +74,22 @@ const Navbar = () => {
       </div>
       <div className="navbar-end gap-2 mr-4">
         <div className="indicator">
-          <span className="indicator-item badge badge-neutral">0</span>
-          <a className="btn bg-white btn-sm lg:btn-md btn-circle">
+          <span className="indicator-item badge badge-neutral">{cart}</span>
+          <Link
+            to="/dashboard"
+            className="btn bg-white btn-sm lg:btn-md btn-circle"
+          >
             <FaShoppingCart size={20} />
-          </a>
+          </Link>
         </div>
         <div className="indicator">
-          <span className="indicator-item badge badge-neutral">0</span>
-          <a className="btn btn-circle bg-white btn-sm lg:btn-md">
+          <span className="indicator-item badge badge-neutral">{wishList}</span>
+          <Link
+            to="/dashboard/wishlist"
+            className="btn btn-circle bg-white btn-sm lg:btn-md"
+          >
             <FaRegHeart size={20}></FaRegHeart>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
