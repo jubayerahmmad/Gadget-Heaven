@@ -25,6 +25,16 @@ const Cart = () => {
     setCart(cartList);
   };
 
+  const handleSort = () => {
+    const getCart = getStoredCart();
+    const cartList = [...products].filter((product) =>
+      getCart.includes(product.product_id)
+    );
+
+    const sorted = cartList.sort((a, b) => b.price - a.price);
+    setCart(sorted);
+  };
+
   return (
     <div>
       <div className="flex justify-between items-center my-8">
@@ -34,7 +44,10 @@ const Cart = () => {
         <div className="flex items-center gap-2">
           <p className="font-bold">Total Cost: $ 0</p>
           <div>
-            <button className="btn rounded-full btn-sm lg:btn-md text-purple-500 border border-purple-500">
+            <button
+              onClick={() => handleSort()}
+              className="btn rounded-full btn-sm lg:btn-md text-purple-500 border border-purple-500"
+            >
               Sort By Price <FaSort />
             </button>
           </div>

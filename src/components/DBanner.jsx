@@ -1,5 +1,4 @@
 import { NavLink, useLocation } from "react-router-dom";
-
 const DBanner = () => {
   const { pathname } = useLocation();
   return (
@@ -15,6 +14,7 @@ const DBanner = () => {
             ? "Browse our collection of premium tech accessories and gadgets"
             : "View detailed specifications and features of this product"}
         </p>
+
         {pathname === "/dashboard" || pathname === "/dashboard/wishlist" ? (
           <div className="flex gap-2 justify-center">
             <NavLink

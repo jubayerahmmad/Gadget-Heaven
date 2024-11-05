@@ -11,11 +11,14 @@ import ProductDetails from "./components/productDetails";
 import Cart from "./components/Cart";
 import WishList from "./components/WishList";
 import { Toaster } from "react-hot-toast";
+import ErrorPage from "./components/ErrorPage";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -65,7 +68,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
     <Toaster />
   </StrictMode>
 );

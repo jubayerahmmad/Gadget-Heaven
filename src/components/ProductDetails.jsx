@@ -7,6 +7,7 @@ import {
   getStoredWishlist,
 } from "../Utils/utilities";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -50,6 +51,9 @@ const ProductDetails = () => {
   } = details;
   return (
     <div>
+      <Helmet>
+        <title>Product Details | Gadget Heaven</title>
+      </Helmet>
       <div className="relative mb-[500px] lg:mb-96">
         <DBanner></DBanner>
       </div>

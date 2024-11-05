@@ -1,12 +1,16 @@
 import { Outlet, useLoaderData } from "react-router-dom";
 import CategorySidebar from "../components/CategorySidebar";
 import HomeBanner from "../components/HomeBanner";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const categories = useLoaderData();
 
   return (
     <div>
+      <Helmet>
+        <title>Home | Gadget Heaven</title>
+      </Helmet>
       <HomeBanner></HomeBanner>
       <div className="my-12 w-10/12 mx-auto">
         <h1 className="text-center font-bold text-2xl lg:text-4xl my-4">
