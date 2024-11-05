@@ -4,21 +4,38 @@ import { FaRegStar, FaRegHeart, FaShoppingCart } from "react-icons/fa";
 import {
   addCartToLocalStorage,
   addWishlistToLocalStorage,
+  getStoredWishlist,
 } from "../Utils/utilities";
+import { useEffect, useState } from "react";
 
 const ProductDetails = () => {
   const { productId } = useParams();
   const products = useLoaderData();
+  const [details, setDetails] = useState({});
 
-  const detailedProduct = [...products].find(
-    (product) => product.product_id === productId
-  );
+  const [isAddedWishlist, setIsAddedWishList] = useState(false);
+
+  useEffect(() => {
+    const detailedProduct = [...products].find(
+      (product) => product.product_id === productId
+    );
+    setDetails(detailedProduct);
+
+    const wishList = getStoredWishlist();
+    const isAvailable = wishList.find(
+      (productId) => productId === detailedProduct.product_id
+    );
+    if (isAvailable) {
+      setIsAddedWishList(true);
+    }
+  }, []);
 
   const handleAddToCart = (id) => {
     addCartToLocalStorage(id);
   };
   const handleAddToWishlist = (id) => {
     addWishlistToLocalStorage(id);
+    setIsAddedWishList(true);
   };
 
   const {
@@ -30,7 +47,7 @@ const ProductDetails = () => {
     description,
     rating,
     availability,
-  } = detailedProduct;
+  } = details;
   return (
     <div>
       <div className="relative mb-[500px] lg:mb-96">
@@ -64,7 +81,7 @@ const ProductDetails = () => {
               <div>
                 <h1 className="font-bold">Specifications:</h1>
                 <ul className="list-disc ml-8">
-                  {specifications.map((specs, idx) => (
+                  {specifications?.map((specs, idx) => (
                     <li key={idx}>{specs}</li>
                   ))}
                 </ul>
@@ -84,6 +101,7 @@ const ProductDetails = () => {
                   Add to Cart <FaShoppingCart size={20} />
                 </button>
                 <button
+                  disabled={isAddedWishlist}
                   onClick={() => handleAddToWishlist(product_id)}
                   className="btn btn-sm lg:btn-md rounded-full border border-purple-500 text-purple-500 font-bold"
                 >

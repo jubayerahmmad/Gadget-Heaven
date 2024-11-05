@@ -1,25 +1,35 @@
 import { FaSort } from "react-icons/fa";
+import { FaTrash } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
-import { getStoredCart } from "../Utils/utilities";
+import { getStoredCart, removeCart } from "../Utils/utilities";
 import { useEffect, useState } from "react";
 const Cart = () => {
   const [cart, setCart] = useState([]);
-  const data = useLoaderData();
-  // console.log(data);
+  const products = useLoaderData();
   useEffect(() => {
     const getCart = getStoredCart();
-    const storedId = getCart.map((id) => id);
 
-    const cartList = [...data].filter((product) =>
-      storedId.includes(product.product_id)
+    const cartList = [...products].filter((product) =>
+      getCart.includes(product.product_id)
     );
     setCart(cartList);
   }, []);
+
+  const handleDelete = (id) => {
+    removeCart(id);
+    const getCart = getStoredCart();
+
+    const cartList = [...products].filter((product) =>
+      getCart.includes(product.product_id)
+    );
+    setCart(cartList);
+  };
+
   return (
     <div>
       <div className="flex justify-between items-center my-8">
         <div>
-          <h1 className="font-bold">Cart</h1>
+          <h1 className="font-bold lg:text-xl">Cart</h1>
         </div>
         <div className="flex items-center gap-2">
           <p className="font-bold">Total Cost: $ 0</p>
@@ -57,7 +67,12 @@ const Cart = () => {
               </div>
             </div>
             <div>
-              <button className="btn btn-warning btn-outline">Delete</button>
+              <button
+                onClick={() => handleDelete(product.product_id)}
+                className="btn btn-error btn-circle btn-outline"
+              >
+                <FaTrash />
+              </button>
             </div>
           </div>
         ))}

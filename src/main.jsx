@@ -10,6 +10,7 @@ import Cards from "./components/Cards";
 import ProductDetails from "./components/productDetails";
 import Cart from "./components/Cart";
 import WishList from "./components/WishList";
+import { Toaster } from "react-hot-toast";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,7 @@ const router = createBrowserRouter([
           {
             path: "/dashboard/wishlist",
             element: <WishList></WishList>,
+            loader: () => fetch("../productData.json"),
           },
         ],
       },
@@ -64,5 +66,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <Toaster />
   </StrictMode>
 );
