@@ -54,9 +54,13 @@ const WishList = () => {
                 />
               </div>
               <div className="space-y-2">
-                <h1 className="font-bold text-xl">{product.product_title}</h1>
-                <p className="font-bold text-gray-500">{product.description}</p>
-                <p className="font-bold">Price: ${product.price}</p>
+                <h1 className="font-bold lg:text-xl">
+                  {product.product_title}
+                </h1>
+                <p className="font-semibold text-sm text-gray-500">
+                  {product.description}
+                </p>
+                <p className="font-bold text-sm">Price: ${product.price}</p>
 
                 <button
                   onClick={() => handleAddToCart(product.product_id)}
@@ -69,7 +73,7 @@ const WishList = () => {
             <div>
               <button
                 onClick={() => handleRemoveWishList(product.product_id)}
-                className="btn btn-error btn-circle btn-outline"
+                className="btn btn-error btn-circle btn-outline btn-sm lg:btn-md"
               >
                 <FaTrash />
               </button>
