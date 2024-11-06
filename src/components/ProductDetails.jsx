@@ -57,6 +57,7 @@ const ProductDetails = () => {
       <div className="relative mb-[500px] lg:mb-96">
         <DBanner></DBanner>
       </div>
+
       <div className="p-4 absolute left-1/2 top-[300px] lg:top-[280px] -translate-x-1/2 w-full">
         <div className="container mx-auto border rounded-xl p-4 bg-white">
           <div className="lg:flex items-center gap-8 space-y-4">

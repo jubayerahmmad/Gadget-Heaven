@@ -17,6 +17,11 @@ const Statistics = () => {
           </p>
         </div>
       </div>
+      <div>
+        <h1 className="text-5xl text-center text-purple-500 font-bold mt-16">
+          No Statistics To Show
+        </h1>
+      </div>
     </div>
   );
 };

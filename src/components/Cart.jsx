@@ -1,10 +1,18 @@
 import { FaSort } from "react-icons/fa";
 import { FaTrash } from "react-icons/fa";
-import { useLoaderData } from "react-router-dom";
-import { getStoredCart, removeCart } from "../Utils/utilities";
+import { useLoaderData, useNavigate } from "react-router-dom";
+import { getStoredCart, removeAll, removeCart } from "../Utils/utilities";
 import { useEffect, useState } from "react";
+import Modal from "react-modal";
+import modalImg from "../assets/Group.png";
+
+Modal.setAppElement("#root");
+
 const Cart = () => {
   const [cart, setCart] = useState([]);
+  const [modal, setModal] = useState(false);
+  const navigate = useNavigate();
+
   const products = useLoaderData();
   useEffect(() => {
     const getCart = getStoredCart();
@@ -35,6 +43,21 @@ const Cart = () => {
     setCart(sorted);
   };
 
+  const handlePurchase = () => {
+    removeAll();
+    const getCart = getStoredCart();
+    const cartList = [...products].filter((product) =>
+      getCart.includes(product.product_id)
+    );
+    setCart(cartList);
+    setModal(true);
+  };
+
+  const closeModal = () => {
+    setModal(false);
+    navigate("/");
+  };
+
   return (
     <div>
       <div className="flex justify-between items-center my-8">
@@ -52,12 +75,17 @@ const Cart = () => {
             </button>
           </div>
           <div>
-            <button className="btn rounded-full btn-sm lg:btn-md bg-purple-500 text-white border border-purple-500">
+            <button
+              onClick={handlePurchase}
+              disabled={cart.length === 0}
+              className="btn rounded-full btn-sm lg:btn-md bg-purple-500 text-white border border-purple-500"
+            >
               Purchase
             </button>
           </div>
         </div>
       </div>
+
       {/* dynamic cartlist card */}
       <div className="space-y-4">
         {cart.map((product, index) => (
@@ -90,6 +118,39 @@ const Cart = () => {
           </div>
         ))}
       </div>
+      {/* Modal */}
+      <Modal
+        isOpen={modal}
+        onRequestClose={closeModal}
+        shouldCloseOnOverlayClick={false}
+        shouldCloseOnEsc={false}
+        style={{
+          content: {
+            top: "50%",
+            left: "50%",
+            right: "auto",
+            bottom: "auto",
+            transform: "translate(-50%, -50%)",
+            padding: "20px",
+          },
+        }}
+      >
+        <div className="space-y-4 text-center">
+          <div className="flex justify-center">
+            <img src={modalImg} alt="" />
+          </div>
+          <h2>Purchase Confirmation</h2>
+          <p className="font-bold">
+            Your purchase has been processed successfully!
+          </p>
+          <button
+            onClick={closeModal}
+            className="btn rounded-full text-purple-500 border border-purple-500"
+          >
+            Close
+          </button>
+        </div>
+      </Modal>
     </div>
   );
 };

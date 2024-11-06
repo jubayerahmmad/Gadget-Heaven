@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useParams } from "react-router-dom";
 import { FaRegHeart, FaShoppingCart } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { getStoredCart, getStoredWishlist } from "../Utils/utilities";
@@ -7,6 +7,8 @@ const Navbar = () => {
   const [cart, setCart] = useState(0);
   const [wishList, setWishList] = useState(0);
   const { pathname } = useLocation();
+  const { category } = useParams();
+
   useEffect(() => {
     const getCart = getStoredCart();
     const getWishList = getStoredWishlist();
@@ -57,7 +59,9 @@ const Navbar = () => {
         <Link
           to="/"
           className={`btn btn-ghost text-xl lg:text-4xl font-bold ${
-            pathname === "/" ? "text-white" : "text-black"
+            pathname === "/" || pathname === `/cards/${category}`
+              ? "text-white"
+              : "text-black"
           }`}
         >
           Gadget Heaven
@@ -66,7 +70,9 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul
           className={`text-2xl gap-4 px-4 py-2 flex font-semibold ${
-            pathname === "/" ? "text-white" : "text-black"
+            pathname === "/" || pathname === `/cards/${category}`
+              ? "text-white"
+              : "text-black"
           }`}
         >
           {links}
