@@ -53,7 +53,7 @@
 
   {
     "product_id": "L201",
-    "product_title": "Apple MacBook Pro 14-inch",
+    "product_title": "Apple MacBook Pro",
     "product_image": "https://i.ibb.co.com/qWSZ0q8/Apple-Mac-Book-Pro-M3-Pro-14-inch-11-Core-CPU-14-Core-GPU-2.jpg",
     "category": "Laptops",
     "price": 1999,
@@ -156,7 +156,7 @@
   },
   {
     "product_id": "A301",
-    "product_title": "Apple AirPods Pro (2nd Generation)",
+    "product_title": "Apple AirPods Pro",
     "product_image": "https://i.ibb.co.com/8dVkjBk/og-eui2mpgzwyaa-overview.png",
     "category": "Accessories",
     "price": 249,

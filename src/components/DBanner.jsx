@@ -22,11 +22,11 @@ const DBanner = () => {
         {pathname === "/dashboard" ||
         pathname === "/dashboard/cart" ||
         pathname === "/dashboard/wishlist" ? (
-          <div className="flex gap-2 justify-center">
+          <div className="flex gap-2 justify-center lg:w-1/12 mx-auto">
             <NavLink
               to="/dashboard/cart"
               className={({ isActive }) =>
-                `btn btn-outline rounded-full ${
+                `btn btn-outline rounded-full lg:w-full ${
                   isActive ? "text-black bg-white" : "text-white"
                 }`
               }
@@ -36,7 +36,7 @@ const DBanner = () => {
             <NavLink
               to="/dashboard/wishlist"
               className={({ isActive }) =>
-                `btn btn-outline rounded-full ${
+                `btn btn-outline rounded-full lg:w-full ${
                   isActive ? "text-black bg-white" : "text-white"
                 }`
               }

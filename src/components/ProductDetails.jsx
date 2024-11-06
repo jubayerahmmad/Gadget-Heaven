@@ -61,7 +61,7 @@ const ProductDetails = () => {
       <Helmet>
         <title>Product Details | Gadget Heaven</title>
       </Helmet>
-      <div className="relative mb-[500px] lg:mb-96">
+      <div className="relative mb-[600px] lg:mb-96">
         <DBanner></DBanner>
       </div>
 
@@ -70,7 +70,7 @@ const ProductDetails = () => {
           <div className="lg:flex items-center gap-8 space-y-4">
             <div>
               <img
-                className="h-64 w-full lg:h-96 lg:w-96 border rounded-xl"
+                className="h-64 w-full mx-auto object-cover lg:h-96 lg:w-96 border rounded-xl"
                 src={product_image}
                 alt=""
               />

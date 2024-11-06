@@ -4,10 +4,10 @@ import bannerImg from "../assets/banner.jpg";
 const HomeBanner = () => {
   return (
     <div>
-      <div className="bg-purple-600 h-[750px] rounded-3xl w-11/12 mx-auto -mt-24 mb-40 lg:mb-96 flex flex-col items-center justify-center relative">
+      <div className="bg-purple-600 h-[600px] lg:h-[750px] rounded-3xl w-11/12 mx-auto -mt-24 mb-40 lg:mb-96 flex flex-col items-center justify-center relative">
         <div className="text-center space-y-8 ">
           <h1 className="text-3xl lg:text-6xl font-bold  text-white px-4">
-            Upgrade Your Tech Accessorize with Gadget Heaven Accessories
+            Upgrade Your Tech Accessories with Gadget Heaven Accessories
           </h1>
           <p className="text-gray-300 lg:text-lg px-4">
             Explore the latest gadgets that will take your experience to the
@@ -21,7 +21,7 @@ const HomeBanner = () => {
           </Link>
         </div>
       </div>
-      <div className="absolute left-1/2 top-[700px] lg:top-[580px] -translate-x-1/2 w-fit mx-auto p-4 rounded-xl border-2 border-white bg-transparent backdrop-blur-lg">
+      <div className="absolute left-1/2 top-[550px] lg:top-[580px] -translate-x-1/2 w-fit mx-auto p-4 rounded-xl border-2 border-white bg-transparent backdrop-blur-lg">
         <img
           className="mx-auto rounded-xl lg:h-[500px]"
           src={bannerImg}

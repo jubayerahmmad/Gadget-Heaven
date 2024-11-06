@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./components/Root";
+import Root from "./Root/Root";
 import Home from "./pages/Home";
 import Statistics from "./pages/Statistics";
 import Dashboard from "./pages/Dashboard";

@@ -16,7 +16,7 @@ const Home = () => {
         <h1 className="text-center font-bold text-2xl lg:text-4xl my-4">
           Explore Cutting-Edge Gadgets
         </h1>
-        <div className="lg:flex gap-6 my-12">
+        <div className="lg:flex gap-6 mx-4 my-12">
           <div className="lg:w-1/4">
             <CategorySidebar categories={categories}></CategorySidebar>
           </div>

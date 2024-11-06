@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const CategorySidebar = ({ categories }) => {
   return (
     <div>
-      <div className="flex flex-col gap-6 p-4 rounded-2xl border flex-grow">
+      <div className="flex flex-col gap-6 mb-4 p-4 rounded-2xl border flex-grow">
         <NavLink
           className={({ isActive }) =>
             `btn rounded-full w-full border border-purple-500 ${

@@ -11,7 +11,7 @@ const ErrorPage = () => {
       <Helmet>
         <title>Error 404 | Gadget Heaven</title>
       </Helmet>
-      <div className="text-center space-y-4">
+      <div className="text-center space-y-4 my-4">
         <h1 className="text-5xl text-center">404 Not Found</h1>
         <button
           onClick={goHome}
