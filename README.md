@@ -47,5 +47,6 @@
 4. **Wishlist Management**
 
    - Easy add/remove to wishlist
+   - Option to move items from wishlist to cart
    - Separate wishlist section
    - Persistent wishlist data

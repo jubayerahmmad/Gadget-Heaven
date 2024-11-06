@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { getStoredWishlist, removeWishList } from "../Utils/utilities";
+import {
+  addCartToLocalStorage,
+  getStoredWishlist,
+  removeWishList,
+} from "../Utils/utilities";
 
 import { FaTrash } from "react-icons/fa";
 
@@ -25,10 +29,15 @@ const WishList = () => {
     setWishList(storedWishList);
   };
 
+  const handleAddToCart = (id) => {
+    addCartToLocalStorage(id);
+    handleRemoveWishList(id);
+  };
+
   return (
     <div className="my-8">
       <div className="my-6">
-        <h1 className="font-bold">Wishlist</h1>
+        <h1 className="font-bold lg:text-xl">Wishlist</h1>
       </div>
       <div className="space-y-4">
         {wishList.map((product, idx) => (
@@ -39,7 +48,7 @@ const WishList = () => {
             <div className="flex gap-4 items-center">
               <div>
                 <img
-                  className="h-24 w-32 rounded-2xl border"
+                  className="h-32 w-40 rounded-2xl border"
                   src={product.product_image}
                   alt=""
                 />
@@ -48,6 +57,13 @@ const WishList = () => {
                 <h1 className="font-bold text-xl">{product.product_title}</h1>
                 <p className="font-bold text-gray-500">{product.description}</p>
                 <p className="font-bold">Price: ${product.price}</p>
+
+                <button
+                  onClick={() => handleAddToCart(product.product_id)}
+                  className="btn btn-sm border border-purple-500 rounded-full text-purple-500"
+                >
+                  Add To Cart
+                </button>
               </div>
             </div>
             <div>

@@ -13,6 +13,7 @@ import WishList from "./components/WishList";
 import { Toaster } from "react-hot-toast";
 import ErrorPage from "./components/ErrorPage";
 import { HelmetProvider } from "react-helmet-async";
+import Faqs from "./pages/Faqs";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "/statistics",
         element: <Statistics></Statistics>,
+      },
+      {
+        path: "/faqs",
+        element: <Faqs></Faqs>,
       },
       {
         path: "/dashboard",

@@ -48,6 +48,7 @@ const ProductDetails = () => {
     description,
     rating,
     availability,
+    warranty,
   } = details;
   return (
     <div>
@@ -68,7 +69,7 @@ const ProductDetails = () => {
                 alt=""
               />
             </div>
-            <div className="space-y-3">
+            <div className="space-y-2">
               <h1 className="lg:text-4xl text-2xl font-bold ">
                 {product_title}
               </h1>
@@ -98,6 +99,7 @@ const ProductDetails = () => {
                   <FaRegStar />
                 </div>
               </div>
+              <h1 className="font-bold">Warranty: {warranty} </h1>
               <div className="flex gap-6">
                 <button
                   onClick={() => handleAddToCart(product_id)}

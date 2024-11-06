@@ -11,12 +11,12 @@ Modal.setAppElement("#root");
 const Cart = () => {
   const [cart, setCart] = useState([]);
   const [modal, setModal] = useState(false);
+
   const navigate = useNavigate();
 
   const products = useLoaderData();
   useEffect(() => {
     const getCart = getStoredCart();
-
     const cartList = [...products].filter((product) =>
       getCart.includes(product.product_id)
     );
@@ -49,6 +49,7 @@ const Cart = () => {
     const cartList = [...products].filter((product) =>
       getCart.includes(product.product_id)
     );
+
     setCart(cartList);
     setModal(true);
   };
@@ -65,7 +66,7 @@ const Cart = () => {
           <h1 className="font-bold lg:text-xl">Cart</h1>
         </div>
         <div className="flex items-center gap-2">
-          <p className="font-bold">Total Cost: $ 0</p>
+          <p className="font-bold">Total: $0</p>
           <div>
             <button
               onClick={() => handleSort()}
@@ -118,6 +119,7 @@ const Cart = () => {
           </div>
         ))}
       </div>
+
       {/* Modal */}
       <Modal
         isOpen={modal}
@@ -132,6 +134,7 @@ const Cart = () => {
             bottom: "auto",
             transform: "translate(-50%, -50%)",
             padding: "20px",
+            borderRadius: "20px",
           },
         }}
       >

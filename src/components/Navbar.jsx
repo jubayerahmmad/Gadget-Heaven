@@ -14,7 +14,7 @@ const Navbar = () => {
     const getWishList = getStoredWishlist();
     setCart(getCart.length);
     setWishList(getWishList.length);
-  }, []);
+  }, [setCart, setWishList]);
 
   const links = (
     <>
@@ -26,6 +26,9 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink to="/dashboard">Dashboard</NavLink>
+      </li>
+      <li>
+        <NavLink to="/faqs">FAQs</NavLink>
       </li>
     </>
   );
