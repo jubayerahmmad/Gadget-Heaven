@@ -1,6 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import DBanner from "./DBanner";
-import { FaRegStar, FaRegHeart, FaShoppingCart } from "react-icons/fa";
+import { FaRegHeart, FaShoppingCart } from "react-icons/fa";
 import {
   addCartToLocalStorage,
   addWishlistToLocalStorage,
@@ -8,6 +8,8 @@ import {
 } from "../Utils/utilities";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import ReactStars from "react-rating-stars-component";
+import toast from "react-hot-toast";
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -32,7 +34,11 @@ const ProductDetails = () => {
   }, []);
 
   const handleAddToCart = (id) => {
-    addCartToLocalStorage(id);
+    if (availability) {
+      addCartToLocalStorage(id);
+    } else {
+      toast.error("Product Stock Out");
+    }
   };
   const handleAddToWishlist = (id) => {
     addWishlistToLocalStorage(id);
@@ -92,11 +98,23 @@ const ProductDetails = () => {
                   ))}
                 </ul>
               </div>
-              <div className="flex gap-4 items-center">
-                <h1 className="font-bold">Rating: </h1>
+              <div>
                 <div className="flex gap-2 items-center">
-                  <p>{rating}</p>
-                  <FaRegStar />
+                  <h1 className="font-bold">Rating: </h1>
+                  <p className="px-2 py-1 rounded-full bg-slate-300 font-bold">
+                    {rating}
+                  </p>
+                </div>
+                <div>
+                  <ReactStars
+                    key={product_id}
+                    isHalf={true}
+                    count={5} // Number of stars
+                    value={rating} // Current rating to display
+                    size={24} // Size of the stars
+                    activeColor="#ffd700" // Color for active stars
+                    edit={false} // Disable editing if you want a static rating
+                  />
                 </div>
               </div>
               <h1 className="font-bold">Warranty: {warranty} </h1>

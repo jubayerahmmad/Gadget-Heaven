@@ -113,11 +113,13 @@ const Cart = () => {
                 />
               </div>
               <div className="space-y-2">
-                <h1 className="font-bold text-xl">{product.product_title}</h1>
-                <p className="font-semiboldbold text-gray-500 text-xs">
+                <h1 className="font-bold text-2xl">{product.product_title}</h1>
+                <p className="font-semiboldbold text-gray-500 text-xs lg:text-lg">
                   {product.description}
                 </p>
-                <p className="font-semibold text-xs">Price: ${product.price}</p>
+                <p className="font-semibold text-xs lg:text-lg">
+                  Price: ${product.price}
+                </p>
               </div>
             </div>
             <div>

@@ -17,6 +17,7 @@
 - Conditional Rendering
 - React Accessible Accordion for FAQ section
 - React Modal for purchase confirmation dialogs
+- React Rating Stars Component for dynamic product ratings
 - Props and State Management
 
 ## Data Management
