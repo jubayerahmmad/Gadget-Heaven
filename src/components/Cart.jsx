@@ -11,16 +11,22 @@ Modal.setAppElement("#root");
 const Cart = () => {
   const [cart, setCart] = useState([]);
   const [modal, setModal] = useState(false);
+  const [total, setTotal] = useState(0);
 
   const navigate = useNavigate();
 
   const products = useLoaderData();
+
   useEffect(() => {
     const getCart = getStoredCart();
     const cartList = [...products].filter((product) =>
       getCart.includes(product.product_id)
     );
     setCart(cartList);
+
+    const cartPrice = cartList.map((product) => product.price);
+    const totalPrice = cartPrice.reduce((total, current) => total + current, 0);
+    setTotal(totalPrice);
   }, []);
 
   const handleDelete = (id) => {
@@ -31,6 +37,10 @@ const Cart = () => {
       getCart.includes(product.product_id)
     );
     setCart(cartList);
+
+    const cartPrice = cartList.map((product) => product.price);
+    const totalPrice = cartPrice.reduce((total, current) => total + current, 0);
+    setTotal(totalPrice);
   };
 
   const handleSort = () => {
@@ -66,7 +76,7 @@ const Cart = () => {
           <h1 className="font-bold lg:text-xl">Cart</h1>
         </div>
         <div className="flex items-center gap-2">
-          <p className="font-bold">Total: $0</p>
+          <p className="font-bold">Total: ${total}</p>
           <div>
             <button
               onClick={() => handleSort()}
@@ -104,14 +114,16 @@ const Cart = () => {
               </div>
               <div className="space-y-2">
                 <h1 className="font-bold text-xl">{product.product_title}</h1>
-                <p className="font-bold text-gray-500">{product.description}</p>
-                <p className="font-bold">Price: ${product.price}</p>
+                <p className="font-semiboldbold text-gray-500 text-xs">
+                  {product.description}
+                </p>
+                <p className="font-semibold text-xs">Price: ${product.price}</p>
               </div>
             </div>
             <div>
               <button
                 onClick={() => handleDelete(product.product_id)}
-                className="btn btn-error btn-circle btn-outline"
+                className="btn btn-error btn-sm lg:btn-md btn-circle btn-outline"
               >
                 <FaTrash />
               </button>
