@@ -15,6 +15,8 @@
 - React Icons for UI elements
 - React Helmet Async for dynamic title.
 - Conditional Rendering
+- React Accessible Accordion for FAQ section
+- React Modal for purchase confirmation dialogs
 - Props and State Management
 
 ## Data Management
