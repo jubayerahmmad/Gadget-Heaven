@@ -25,7 +25,7 @@ const Navbar = () => {
         <NavLink to="/statistics">Statistics</NavLink>
       </li>
       <li>
-        <NavLink to="/dashboard">Dashboard</NavLink>
+        <NavLink to="/dashboard/cart">Dashboard</NavLink>
       </li>
       <li>
         <NavLink to="/faqs">FAQs</NavLink>
@@ -36,7 +36,7 @@ const Navbar = () => {
     <div className="navbar mb-6 relative z-50 my-8">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div tabIndex={0} role="button" className="btn btn-ghost xl:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -70,7 +70,7 @@ const Navbar = () => {
           Gadget Heaven
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden xl:flex">
         <ul
           className={`text-2xl gap-4 px-4 py-2 flex font-semibold ${
             pathname === "/" || pathname === `/cards/${category}`

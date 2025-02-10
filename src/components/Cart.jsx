@@ -71,7 +71,7 @@ const Cart = () => {
 
   return (
     <div>
-      <div className="flex justify-between items-center my-8">
+      <div className="flex justify-between items-center my-8 px-4">
         <div>
           <h1 className="font-bold lg:text-xl">Cart</h1>
         </div>
@@ -99,39 +99,47 @@ const Cart = () => {
 
       {/* dynamic cartlist card */}
       <div className="space-y-4">
-        {cart.map((product, index) => (
-          <div
-            key={index}
-            className="flex justify-between items-center p-4 border-2 rounded-xl"
-          >
-            <div className="flex gap-4 items-center">
+        {cart &&
+          cart.map((product, index) => (
+            <div
+              key={index}
+              className="flex justify-between items-center p-4 border-2 rounded-xl"
+            >
+              <div className="flex gap-4 items-center">
+                <div>
+                  <img
+                    className="h-24 w-32 rounded-2xl border"
+                    src={product.product_image}
+                    alt=""
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h1 className="font-bold text-2xl">
+                    {product.product_title}
+                  </h1>
+                  <p className="font-semiboldbold text-gray-500 text-xs lg:text-lg">
+                    {product.description}
+                  </p>
+                  <p className="font-semibold text-xs lg:text-lg">
+                    Price: ${product.price}
+                  </p>
+                </div>
+              </div>
               <div>
-                <img
-                  className="h-24 w-32 rounded-2xl border"
-                  src={product.product_image}
-                  alt=""
-                />
-              </div>
-              <div className="space-y-2">
-                <h1 className="font-bold text-2xl">{product.product_title}</h1>
-                <p className="font-semiboldbold text-gray-500 text-xs lg:text-lg">
-                  {product.description}
-                </p>
-                <p className="font-semibold text-xs lg:text-lg">
-                  Price: ${product.price}
-                </p>
+                <button
+                  onClick={() => handleDelete(product.product_id)}
+                  className="btn btn-error btn-sm lg:btn-md btn-circle btn-outline"
+                >
+                  <FaTrash />
+                </button>
               </div>
             </div>
-            <div>
-              <button
-                onClick={() => handleDelete(product.product_id)}
-                className="btn btn-error btn-sm lg:btn-md btn-circle btn-outline"
-              >
-                <FaTrash />
-              </button>
-            </div>
-          </div>
-        ))}
+          ))}
+        {cart.length === 0 && (
+          <h1 className="text-3xl font-bold text-center p-6">
+            No Items Added to Cart
+          </h1>
+        )}
       </div>
 
       {/* Modal */}
